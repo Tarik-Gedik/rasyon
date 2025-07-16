@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Genel stiller */
+html,
+body,
+#root {
+  height: 100%;
+  @apply text-gray-800;
+}
+
+/* Modern arka plan gradients */
+.bg-gradient-farm {
+  @apply bg-gradient-to-br from-green-50 to-blue-50;
+}
+.bg-gradient-animal {
+  @apply bg-gradient-to-br from-green-100 to-green-50;
+}
+.bg-gradient-ration {
+  @apply bg-gradient-to-br from-blue-100 to-blue-50;
+}
+
+/* Animasyonlar */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes modalEnter {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+.animate-slide-up {
+  animation: slideUp 0.5s ease-out forwards;
+}
+.animate-modal {
+  animation: modalEnter 0.3s ease-out forwards;
+}
+
+/* Form ve input iyileştirmeleri */
+input:focus,
+select:focus {
+  @apply outline-none ring-2 ring-offset-2 ring-green-500;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Buton iyileştirmeleri */
+.btn {
+  @apply px-4 py-2 rounded-lg transition-all duration-200 transform hover:shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2;
+}
+
+.btn-primary {
+  @apply btn bg-green-600 hover:bg-green-700 text-white focus:ring-green-500;
+}
+
+.btn-secondary {
+  @apply btn bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-500;
+}
+
+.btn-danger {
+  @apply btn bg-red-600 hover:bg-red-700 text-white focus:ring-red-500;
+}
+
+.btn-light {
+  @apply btn bg-gray-200 hover:bg-gray-300 text-gray-800 focus:ring-gray-500;
+}
+
+/* overlay için yardımcı sınıf */
+.bg-overlay {
+  @apply bg-black bg-opacity-50;
+}

@@ -1,0 +1,31 @@
+{
+  "name": "rasyon_front",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^1.9.0",
+    "lucide-react": "^0.507.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "^6.30.0",
+    "react-scripts": "^5.0.1",
+    "resolve-url-loader": "^5.0.0"
+  },
+  "scripts": {
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": [
+    ">0.2%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "devDependencies": {
+    "@craco/craco": "^7.1.0",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.1"
+  }
+}
